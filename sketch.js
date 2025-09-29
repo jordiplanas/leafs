@@ -2,15 +2,17 @@ let leaves = [];
       let leafImg;
       let button;
       let flying = false;
+      let font;
 
       function preload() {
         leafImg = loadImage("leaf.png"); // coloca tu PNG aquí
+        font = loadFont('FuturaBTforDyson-Hv.otf');
       }
 
       function setup() {
         createCanvas(windowWidth, windowHeight);
         imageMode(CENTER);
-
+        textFont(font);
         // hojas iniciales
         for (let i = 0; i < 40; i++) {
           leaves.push(new Leaf(random(width), random(height)));
